@@ -17,13 +17,13 @@ with app.app_context():
 
     authors = []
     for n in range(25):
-        author = Author(name=fake.name(), phone_number='1324543333')
+        author = Author(name=fake.name(), phone_number='1234567890')
         authors.append(author)
 
     db.session.add_all(authors)
     posts = []
     for n in range(25):
-        post = Post(title='Secret banana', content='This is the content Secret' * 50, category= 'Fiction', summary="Summary Secret" )
+        post = Post(title='Secret banana', content='This is the content Secret' * 80, category= 'Fiction', summary="Summary Secret" )
         posts.append(post)
 
     db.session.add_all(posts)
